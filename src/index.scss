@@ -10,7 +10,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --black: #01070f;
+  --black: #010811;
   --black2: #041226;
   --black3: #020c1b;
   --black-lighter: #1c4b91;
@@ -28,6 +28,7 @@
 
 body {
   background-color: var(--black);
+  color: white;
 }
 
 ::-webkit-scrollbar {
