@@ -68,6 +68,13 @@
 }
 
 @font-face {
+  font-family: "ProductLight";
+  src: local("Product"),
+    url("./fonts/Product/ProductSans-Light.ttf") format("truetype");
+  font-weight: light;
+}
+
+@font-face {
   font-family: "Circular";
   src: local("Gilroy"),
     url("./fonts/Filmway/circular-black.woff2") format("truetype");
@@ -105,6 +112,8 @@
 body {
   background-color: var(--black);
   color: white;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 ::-webkit-scrollbar {

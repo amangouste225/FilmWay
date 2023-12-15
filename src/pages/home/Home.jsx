@@ -1,10 +1,11 @@
-import './style.scss';
+import "./style.scss";
 
-import HeroBanner from './heroBanner/HeroBanner';
+import HeroBanner from "./heroBanner/HeroBanner";
+import { Header } from "../../components/header/header";
 
 export const Home = () => {
   return (
-    <div className='home'>
+    <div className="home">
       <HeroBanner />
     </div>
   );

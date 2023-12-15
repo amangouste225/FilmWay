@@ -50,7 +50,7 @@
     margin: 0 auto;
     .title {
       font-family: "Circular";
-      font-size: 50px;
+      font-size: 40px;
       font-weight: 700;
       margin-bottom: 10px;
       @include md {
@@ -59,18 +59,18 @@
       }
     }
     .subTitle {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
       font-family: "GilroyBold";
       margin-bottom: 40px;
       @include md {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
     .searchInput {
       display: flex;
       align-items: center;
-      width: 700px;
+      max-width: 800px;
       input {
         width: 100%;
         height: 40px;
@@ -79,12 +79,14 @@
         border: 0;
         border-radius: 30px 0 0 30px;
         padding: 0 15px;
-        font-size: 14px;
+        font-size: 12px;
         @include md {
-          width: calc(100% - 150px);
+          width: 500px;
           height: 50px;
           padding: 0 30px;
-          font-size: 20px;
+          font-size: 18px;
+          font-weight: light;
+          font-family: ProductLight;
         }
       }
       button {
@@ -95,10 +97,10 @@
         outline: 0;
         border: 0;
         border-radius: 0 30px 30px 0;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 600;
         cursor: pointer;
-        font-family: "ProductBlack", sans-serif;
+        font-family: "ProductBold", sans-serif;
         @include md {
           width: 150px;
           height: 50px;
