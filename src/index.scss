@@ -82,7 +82,7 @@
 }
 
 :root {
-  font-family: Roboto, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1;
   font-weight: 500;
@@ -100,7 +100,7 @@
   --black-light: #173d77;
   --pink: #da2f68;
   --yellow: #f7c600;
-  --gradient: linear-gradient(180deg, #f7c600 100%, #000000 10%);
+  --gradient: linear-gradient(180deg, #f7c600 100%, #000000 1%);
 }
 
 * {
