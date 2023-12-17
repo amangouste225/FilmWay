@@ -18,6 +18,26 @@ export const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const controlNavbar = () => {
+    if (window.scrollY > 200) {
+      if (window.scrollY > lastScrollY && !mobileMenu) {
+        setShow("hide");
+      } else {
+        setShow("show");
+      }
+    } else {
+      setShow("top");
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [scrollY]);
+
   const openSearch = () => {
     setMobileMenu(false);
     setShowSearch(true);
@@ -25,6 +45,15 @@ export const Header = () => {
   const openMobileMenu = () => {
     setMobileMenu(true);
     setShowSearch(false);
+  };
+
+  const navigationHandler = (type) => {
+    if (type === "movie") {
+      navigate("/explore/movie");
+    } else {
+      navigate("/explore/tv");
+    }
+    setMobileMenu(false);
   };
 
   const searchQueryHandler = (e) => {
@@ -43,8 +72,12 @@ export const Header = () => {
           <img src={logo} alt="FilmWay Logo" />
         </div>
         <ul className="menuItems">
-          <li className="menuItem">Movie</li>
-          <li className="menuItem">TV shows</li>
+          <li className="menuItem" onClick={() => navigationHandler("movie")}>
+            Movies
+          </li>
+          <li className="menuItem" onClick={() => navigationHandler("movie")}>
+            TV shows
+          </li>
           <li className="menuItem">
             <HiOutlineSearch />
           </li>
