@@ -5,7 +5,7 @@ import { fetchDataFromApi } from "./services/api";
 import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration } from "./store/homeSlice";
 
-import { Footer } from "./components/footer/footer";
+import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/header";
 import { Home } from "./pages/home/Home";
 import { Details } from "./pages/details/Details";
@@ -46,7 +46,7 @@ function App() {
         <Route path="/search/:query" element={<SearchResult />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }
