@@ -35,6 +35,15 @@ function App() {
       dispatch(getApiConfiguration(url));
     });
   };
+  const genres = async () => {
+    let promises = [];
+    let endPoints = ["tv", "movie"];
+    let allGenres = {};
+
+    endPoints.forEach((url) => {
+      return promises.push(fetchDataFromApi(`/genre/${url}`));
+    });
+  };
 
   return (
     <Router>

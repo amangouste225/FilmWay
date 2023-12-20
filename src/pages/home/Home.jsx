@@ -9,7 +9,6 @@ export const Home = () => {
     <div className="home">
       <HeroBanner />
       <Trending />
-      <Popular />
       <div style={{ height: 1000 }}></div>
     </div>
   );
