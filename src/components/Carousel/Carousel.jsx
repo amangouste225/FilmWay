@@ -1,9 +1,7 @@
 import "./style.scss";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
-import {
-  BsFillArrowLeftCircleFill,
-  BsFillArrowRightCircleFill,
-} from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
@@ -31,11 +29,11 @@ export const Carousel = ({ data, loading }) => {
   return (
     <div className="carousel">
       <ContentWrapper>
-        <BsFillArrowLeftCircleFill
+        <IoIosArrowBack
           className="carouselLeftNav arrow"
           onClick={() => navigation("left")}
         />
-        <BsFillArrowRightCircleFill
+        <IoIosArrowForward
           className="carouselRighttNav arrow"
           onClick={() => navigation("right")}
         />
