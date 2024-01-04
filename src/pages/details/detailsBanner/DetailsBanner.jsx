@@ -8,7 +8,7 @@ import "./style.scss";
 import { ContentWrapper } from "../../../components/contentWrapper/ContentWrapper";
 import useFetch from "../../../hooks/useFetch";
 import { CircleRating } from "../../../components/circle/CircleRating";
-import { Image } from "../../../components/lazyLoadImage/Image.jsx";
+import { Image } from "../../../components/lazyLoadImage/Image";
 import PosterFallback from "../../../assets/no-poster.png";
 
 import { VideoPopup } from "../../../components/videoPopup/videoPopup.jsx";

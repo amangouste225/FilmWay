@@ -10,7 +10,7 @@ import { useEffect, useRef } from "react";
 import PosterFallback from "../../assets/no-poster.png";
 import { CircleRating } from "../circle/CircleRating";
 
-export const Carousel = ({ data, loading, endpoint }) => {
+export const Carousel = ({ data, loading, endpoint, title }) => {
   const carouselContainer = useRef();
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
@@ -42,6 +42,7 @@ export const Carousel = ({ data, loading, endpoint }) => {
   return (
     <div className="carousel">
       <ContentWrapper>
+        {title && <div className="carouselTitle">{title}</div>}
         <IoIosArrowBack
           className="carouselLeftNav arrow"
           onClick={() => navigation("left")}
