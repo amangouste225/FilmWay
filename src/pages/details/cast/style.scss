@@ -29,8 +29,8 @@
         overflow: hidden;
         margin-bottom: 15px;
         @include md {
-          width: 175px;
-          height: 175px;
+          width: 122px;
+          height: 122px;
           margin-bottom: 25px;
         }
         img {
@@ -46,7 +46,7 @@
         line-height: 20px;
         font-weight: 600;
         @include md {
-          font-size: 18px;
+          font-size: 13px;
           line-height: 24px;
         }
       }
@@ -54,9 +54,12 @@
         font-size: 14px;
         line-height: 20px;
         opacity: 0.5;
+        text-overflow: ellipsis;
+
         @include md {
-          font-size: 16px;
+          font-size: 12px;
           line-height: 24px;
+          text-overflow: ellipsis;
         }
       }
     }
@@ -75,13 +78,13 @@
     }
     .skItem {
       .circle {
-        width: 125px;
-        height: 125px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
         margin-bottom: 15px;
         @include md {
-          width: 175px;
-          height: 175px;
+          width: 145px;
+          height: 145px;
           margin-bottom: 25px;
         }
       }
