@@ -10,7 +10,7 @@ import { useEffect, useRef } from "react";
 import PosterFallback from "../../assets/no-poster.png";
 import { CircleRating } from "../circle/CircleRating";
 
-export const Carousel = ({ data, loading }) => {
+export const Carousel = ({ data, loading, endpoint }) => {
   const carouselContainer = useRef();
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
@@ -28,13 +28,15 @@ export const Carousel = ({ data, loading }) => {
   };
 
   const skItem = () => {
-    <div className="skeletonItem">
-      <div className="posterBlock"></div>
-      <div className="textBlock">
-        <div className="title skeleton"></div>
-        <div className="date skeleton"></div>
+    return (
+      <div className="skeletonItem">
+        <div className="posterBlock skeleton"></div>
+        <div className="textBlock">
+          <div className="title skeleton"></div>
+          <div className="date skeleton"></div>
+        </div>
       </div>
-    </div>;
+    );
   };
 
   return (
@@ -51,11 +53,11 @@ export const Carousel = ({ data, loading }) => {
 
         {loading ? (
           <div className="loadingSkeleton">
-            {skeleton()}
-            {skeleton()}
-            {skeleton()}
-            {skeleton()}
-            {skeleton()}
+            {skItem()}
+            {skItem()}
+            {skItem()}
+            {skItem()}
+            {skItem()}
           </div>
         ) : (
           <div className="carouselItems" ref={carouselContainer}>
@@ -67,7 +69,9 @@ export const Carousel = ({ data, loading }) => {
                 <div
                   key={item.id}
                   className="carouselItem"
-                  onClick={() => navigate(`/${item.media_type}/${item.id}`)}
+                  onClick={() =>
+                    navigate(`/${item.media_type || endpoint}/${item.id}`)
+                  }
                 >
                   <div className="posterBlock">
                     <span>
