@@ -34,7 +34,7 @@ export const Carousel = ({ data, loading }) => {
           onClick={() => navigation("left")}
         />
         <IoIosArrowForward
-          className="carouselRighttNav arrow"
+          className="carouselRightNav arrow"
           onClick={() => navigation("right")}
         />
 
